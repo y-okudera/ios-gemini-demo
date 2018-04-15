@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r8Q-vS-x1J">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cube View Controller-->
+        <scene sceneID="aj4-wT-gdO">
+            <objects>
+                <viewController storyboardIdentifier="CubeViewController" id="r8Q-vS-x1J" customClass="CubeViewController" customModule="ios_gemini_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iv2-wR-vuI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ss1-B7-bTt" customClass="GeminiCollectionView" customModule="Gemini">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="F4g-iz-pqS">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="r8Q-vS-x1J" id="sTP-Fu-6kp"/>
+                                    <outlet property="delegate" destination="r8Q-vS-x1J" id="Rfo-mw-9a6"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ss1-B7-bTt" firstAttribute="trailing" secondItem="fKN-Fc-yNX" secondAttribute="trailing" id="0Ka-yW-Hh3"/>
+                            <constraint firstItem="Ss1-B7-bTt" firstAttribute="leading" secondItem="fKN-Fc-yNX" secondAttribute="leading" id="Car-nY-EAi"/>
+                            <constraint firstItem="Ss1-B7-bTt" firstAttribute="top" secondItem="fKN-Fc-yNX" secondAttribute="top" id="GPT-mD-jFk"/>
+                            <constraint firstItem="Ss1-B7-bTt" firstAttribute="bottom" secondItem="fKN-Fc-yNX" secondAttribute="bottom" id="rwn-ez-OeD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fKN-Fc-yNX"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Ss1-B7-bTt" id="4Bd-Bd-BDl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fl3-Vo-t07" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="115.59220389805098"/>
+        </scene>
+    </scenes>
+</document>
